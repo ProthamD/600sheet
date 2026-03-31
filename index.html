@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA Mastery - Learning Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>DSA Mastery</h1>
+                <p class="subtitle">Complete Data Structures & Algorithms Learning Path</p>
+            </div>
+            <div class="header-stats">
+                <div class="stat">
+                    <span class="stat-label">Progress</span>
+                    <span class="stat-value"><span id="completedCount">0</span>/<span id="totalCount">0</span></span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Completion</span>
+                    <span class="stat-value"><span id="percentComplete">0</span>%</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Controls -->
+        <div class="controls">
+            <input 
+                type="text" 
+                id="searchInput" 
+                class="search-box" 
+                placeholder="Search topics, problems..."
+            >
+            <div class="filter-group">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+                <button class="filter-btn" data-filter="pending">Pending</button>
+            </div>
+            <button class="btn btn-secondary" id="exportBtn">Export Progress</button>
+            <button class="btn btn-secondary" id="resetBtn">Reset All</button>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" id="progressBarFill"></div>
+            </div>
+        </div>
+
+        <!-- Task Categories -->
+        <div id="categoriesContainer" class="categories-container">
+            <!-- Categories will be dynamically inserted here -->
+        </div>
+
+        <!-- Empty State -->
+        <div id="emptyState" class="empty-state" style="display: none;">
+            <p>No tasks found. Update tasks.json to get started.</p>
+        </div>
+    </div>
+
+    <!-- Modal for viewing problem details -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <div id="modalBody"></div>
+            <div class="modal-actions">
+                <a id="modalLink" href="#" target="_blank" class="btn btn-primary">Open Problem</a>
+                <button id="modalCloseBtn" class="btn btn-secondary">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

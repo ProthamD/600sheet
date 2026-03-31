@@ -1,0 +1,29 @@
+{
+  "name": "dsa-learning-tracker",
+  "version": "1.0.0",
+  "description": "Dark-themed DSA learning tracker with local storage progress tracking",
+  "main": "app.js",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "convert": "python converter.py",
+    "build": "echo 'No build needed - static site'",
+    "lint": "echo 'No linting configured'"
+  },
+  "keywords": [
+    "dsa",
+    "algorithms",
+    "data-structures",
+    "leetcode",
+    "learning-tracker",
+    "progress-tracker"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/sheets.git"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
